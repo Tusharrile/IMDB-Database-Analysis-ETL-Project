@@ -67,7 +67,8 @@ This repository contains an exploratory data analysis and ETL notebook for the I
 ---
 
 ### 4. Budget vs Gross Revenue Analysis
-<img width="576" height="455" alt="Top 5 Directors by Average Rating" src="https://github.com/user-attachments/assets/63057daf-de83-4a12-8cfa-ad1f9ed511c0" />
+<img width="571" height="455" alt="Budget vs Gross" src="https://github.com/user-attachments/assets/db1ac8b0-4fbb-47ca-b7e1-bb3c14620a53" />
+
 
 **Key Insights:**
 - **Correlation coefficient: 0.0051** - Virtually no linear relationship between budget and gross
