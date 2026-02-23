@@ -20,7 +20,7 @@ This repository contains an exploratory data analysis and ETL notebook for the I
 
 ## How to run
 
-1. Open the notebook: [imdbmovies_etl.ipynb](imdbmovies_etl.ipynb)
+1. Open the notebook: [imdbmovies_etl.ipynb](ETL project.ipynb)
 2. Run the cells sequentially to reproduce the ETL steps and visualizations.
 3. After running, the notebook writes a cleaned CSV: [imdb_movies_cleaned.csv](imdb_movies_cleaned.csv).
 
