@@ -1,16 +1,104 @@
-# Results
+# IMDB Movie Dataset Analysis (Project 1)
 
-## Analysis Graphs
+## Overview
 
-1. **Graph 1 Description**: [Graph 1 Image]
+This repository contains an exploratory data analysis and ETL notebook for the IMDB movie dataset. The primary work is performed in the Jupyter notebook which cleans the data, applies business rules, and produces visualizations useful for movie business analysis and dashboarding.
 
-2. **Graph 2 Description**: [Graph 2 Image]
+## Repository Contents
 
-3. **Graph 3 Description**: [Graph 3 Image]
+- [IMDB Movie Business Rules and dashboard_problems statements.txt](IMDB%20Movie%20Business%20Rules%20and%20dashboard_problems%20statements.txt): Business rules and problem statements for the dashboard.
+- [imdb_ddl.sql](imdb_ddl.sql): DDL for loading the cleaned dataset into a relational database.
+- [imdb_movies.csv](imdb_movies.csv): Original raw dataset (CSV).
+- [imdb_movies_cleaned.csv](imdb_movies_cleaned.csv): Cleaned and preprocessed dataset exported from the notebook.
+- [imdbmovies_etl.ipynb](imdbmovies_etl.ipynb): Main Jupyter notebook performing ETL and analysis.
 
-4. **Graph 4 Description**: [Graph 4 Image]
+## Requirements
 
-You can view the full analysis in the respective sections of the project. 
+- Python 3.8+
+- Jupyter or JupyterLab
+- Common Python packages: `pandas`, `matplotlib`, `sql alchemy` (install via pip)
+
+## How to run
+
+1. Open the notebook: [ETL project.ipynb]
+2. Run the cells sequentially to reproduce the ETL steps and visualizations.
+3. After running, the notebook writes a cleaned CSV: [imdb_movies_cleaned.csv](imdb_movies_cleaned.csv).
+
+## Notebook highlights
+
+- Data loading and initial inspection from [imdb_movies.csv](imdb_movies.csv).
+- Cleaning steps: handling missing values, standardizing columns, parsing dates, and normalizing numeric fields.
+- Business-rule applications as described in [IMDB Movie Business Rules and dashboard_problems statements.txt](IMDB%20Movie%20Business%20Rules%20and%20dashboard_problems%20statements.txt).
+- Visualizations for release trends, top genres, rating distributions, and revenue analysis.
+
+## Results
+
+### 1. Top 10 Highest Grossing Movies by Year
+**Description:** A bar chart displaying the gross earnings (in millions) of the top 10 highest-grossing movies from 2015 to 2022. All bars remain consistently around 600 million, indicating stable box office performance across all years with no significant variation.
+
+**Key Insights:**
+- The top 10 highest-grossing films maintain uniform revenue (~600M) across all years
+- Demonstrates strong and consistent commercial success in the industry
+- No declining trend in top-tier movie revenues over the analyzed period
 
 ---
 
+### 2. Average Rating by Genre
+**Description:** A line chart showing how average movie ratings fluctuate across different genres. The data reveals varying audience reception patterns:
+- **Peak:** Sci-Fi (6.64)
+- **Lowest:** Horror (6.42)
+- Intermediate ratings: Action (6.58), Comedy (6.48), Drama (6.47)
+
+**Key Insights:**
+- Sci-Fi genre receives the highest average ratings from audiences
+- Horror genre tends to receive lower ratings despite popularity
+- Comedy and Drama show below-average ratings (6.48, 6.47)
+- Romance and Fantasy show moderate recovery in ratings
+
+---
+
+### 3. Top 5 Directors by Average Rating
+**Description:** A scatter plot displaying the average ratings of the top 5 most-rated directors:
+1. **Unknown** - 6.60 (highest rated)
+2. **Scorsese** - 6.59
+3. **Spielberg** - 6.58
+4. **Tarantino** - 6.52
+5. **Nolan** - 6.45 (lowest of top 5)
+
+**Key Insights:**
+- Top directors cluster in a narrow rating range (6.45-6.60)
+- Scorsese, Spielberg lead among named directors
+- All top directors maintain quality above 6.45 average rating
+- Directorial prowess ensures consistent audience satisfaction
+
+---
+
+### 4. Budget vs Gross Revenue Analysis
+**Description:** A scatter plot examining the relationship between movie budget (x-axis: $0-$150M) and gross revenue (y-axis: $0-$600M). The analysis shows movies distributed across all budget levels with corresponding varying returns.
+
+**Key Insights:**
+- **Correlation coefficient: 0.0051** - Virtually no linear relationship between budget and gross
+- Budget is NOT a predictor of box office success
+- High-budget films don't guarantee high returns
+- Success depends on other factors: marketing, genre, timing, director reputation, etc.
+- Both low-budget and high-budget films can achieve significant revenues
+
+---
+
+## Database
+
+To load the cleaned dataset into a relational database:
+
+1. Execute the DDL script:
+```bash
+mysql -u root -p imdb_analysis < imdb_ddl.sql
+```
+
+2. Update the database connection in the notebook:
+```python
+gine = create_engine(
+    "mysql+mysqlconnector://root:PASSWORD@localhost:3306/imdb_analysis"
+)
+```
+
+3. Run the notebook to populate the database
