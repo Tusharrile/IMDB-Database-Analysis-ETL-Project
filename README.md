@@ -34,7 +34,7 @@ This repository contains an exploratory data analysis and ETL notebook for the I
 ## Results
 
 ### 1. Top 10 Highest Grossing Movies by Year
-**Description:** A bar chart displaying the gross earnings (in millions) of the top 10 highest-grossing movies from 2015 to 2022. All bars remain consistently around 600 million, indicating stable box office performance across all years with no significant variation.
+<img width="571" height="476" alt="gross_million" src="https://github.com/user-attachments/assets/2d250ad8-1ff7-4061-b5b5-cd9103c39562" />
 
 **Key Insights:**
 - The top 10 highest-grossing films maintain uniform revenue (~600M) across all years
