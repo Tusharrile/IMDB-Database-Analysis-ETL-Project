@@ -44,10 +44,7 @@ This repository contains an exploratory data analysis and ETL notebook for the I
 ---
 
 ### 2. Average Rating by Genre
-**Description:** A line chart showing how average movie ratings fluctuate across different genres. The data reveals varying audience reception patterns:
-- **Peak:** Sci-Fi (6.64)
-- **Lowest:** Horror (6.42)
-- Intermediate ratings: Action (6.58), Comedy (6.48), Drama (6.47)
+<img width="580" height="455" alt="unknown" src="https://github.com/user-attachments/assets/0e624ad0-e753-46d0-a460-ac8316e3d945" />
 
 **Key Insights:**
 - Sci-Fi genre receives the highest average ratings from audiences
@@ -58,12 +55,8 @@ This repository contains an exploratory data analysis and ETL notebook for the I
 ---
 
 ### 3. Top 5 Directors by Average Rating
-**Description:** A scatter plot displaying the average ratings of the top 5 most-rated directors:
-1. **Unknown** - 6.60 (highest rated)
-2. **Scorsese** - 6.59
-3. **Spielberg** - 6.58
-4. **Tarantino** - 6.52
-5. **Nolan** - 6.45 (lowest of top 5)
+<img width="576" height="455" alt="unknown" src="https://github.com/user-attachments/assets/4779d295-faec-4449-95a8-5a89346dd41f" />
+
 
 **Key Insights:**
 - Top directors cluster in a narrow rating range (6.45-6.60)
@@ -74,7 +67,7 @@ This repository contains an exploratory data analysis and ETL notebook for the I
 ---
 
 ### 4. Budget vs Gross Revenue Analysis
-**Description:** A scatter plot examining the relationship between movie budget (x-axis: $0-$150M) and gross revenue (y-axis: $0-$600M). The analysis shows movies distributed across all budget levels with corresponding varying returns.
+<img width="576" height="455" alt="Top 5 Directors by Average Rating" src="https://github.com/user-attachments/assets/63057daf-de83-4a12-8cfa-ad1f9ed511c0" />
 
 **Key Insights:**
 - **Correlation coefficient: 0.0051** - Virtually no linear relationship between budget and gross
@@ -82,6 +75,16 @@ This repository contains an exploratory data analysis and ETL notebook for the I
 - High-budget films don't guarantee high returns
 - Success depends on other factors: marketing, genre, timing, director reputation, etc.
 - Both low-budget and high-budget films can achieve significant revenues
+
+### 5. Most Profitable Genre
+<img width="589" height="455" alt="Most Profitable Genre" src="https://github.com/user-attachments/assets/452d8d4c-e506-454e-bfb7-f72f525e82aa" />
+
+**Key Insights:**
+- Fantasy emerges as the most profitable genre overall
+- Thriller and Action genres closely follow in total profitability
+- Horror generates the lowest total profit among all genres
+- Profit margins are relatively competitive across genres
+- Genre selection plays a significant role in long-term revenue performance
 
 ---
 
